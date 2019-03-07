@@ -1,4 +1,4 @@
-from robot import Robot
+
 from AX12 import AX12
 from time import sleep
 from math import cos
