@@ -2,6 +2,7 @@
 from AX12 import AX12
 from time import sleep
 from math import cos
+from random import randint
 
 # ---------------------------   ROBOT CONSTRUCTION   --------------------------#
 #creates the robot skeleton
@@ -17,15 +18,17 @@ precision = 10
 
 def follow_scroll():
     position = 0
-
-    while 1:
-        
-        t = 0
-	while t < 100:
-        	m.turn(cos(t)*100)
-                t += 0.1
-		sleep(0.1)
-	break
+    t = 0
+    while t < 100:
+    	if t%2 == 0:
+            m.turn(cos(t)*10)
+    		sleep(0.1)
+        else:
+            v = randint(40, 50)
+            m.turn(v)
+            sleep(0.1)
+        t += 1
+    m.turn(0)
 
 
 
