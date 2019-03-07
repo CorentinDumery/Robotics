@@ -19,9 +19,11 @@ precision = 10
 def follow_scroll(): #first robot by dongrui !
     position = 0
     t = 0
-    while t < 100:
-        m.turn(randint(-100,100))
-        sleep(0.1)
+    speed = 0
+    while t < 1000:
+        m.turn(speed)
+        speed += randint(-1,1)
+        sleep(0.01)
         t += 1
     m.turn(0)
 
