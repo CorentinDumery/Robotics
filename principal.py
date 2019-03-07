@@ -25,6 +25,7 @@ def follow_scroll():
         	m.turn(cos(t)*100)
                 t += 0.1
 		sleep(0.1)
+	break
 
 
 
