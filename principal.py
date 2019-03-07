@@ -16,17 +16,12 @@ precision = 10
 
 # -------------------------   SEQUENCE DEFINITION ----------------------------#
 
-def follow_scroll():
+def follow_scroll(): #first robot by dongrui !
     position = 0
     t = 0
     while t < 100:
-        if t%2 == 0:
-            m.turn(cos(t)*10)
-            sleep(0.1)
-        else:
-            v = randint(40, 50)
-            m.turn(v)
-            sleep(0.1)
+        m.turn(randint(-100,100))
+        sleep(0.1)
         t += 1
     m.turn(0)
 
