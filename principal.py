@@ -19,7 +19,7 @@ precision = 10
 def follow_scroll(): #first robot by dongrui !
     position = 0
     t = 0
-    speed = 70
+    speed = 35
     while t < 1000:
         if random() > 0.90:
             m.turn(speed)
