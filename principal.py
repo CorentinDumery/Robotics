@@ -23,6 +23,8 @@ def follow_scroll(): #first robot by dongrui !
     while t < 10000:
         m.turn(speed)
         speed += randint(-5,5)
+        if speed > 50 || speed < -50:
+            speed=0
         sleep(0.001)
         t += 1
     m.turn(0)
