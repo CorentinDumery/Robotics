@@ -20,9 +20,9 @@ def follow_scroll():
     position = 0
     t = 0
     while t < 100:
-    	if t%2 == 0:
+        if t%2 == 0:
             m.turn(cos(t)*10)
-    		sleep(0.1)
+            sleep(0.1)
         else:
             v = randint(40, 50)
             m.turn(v)
