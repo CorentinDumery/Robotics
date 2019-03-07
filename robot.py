@@ -5,11 +5,12 @@ from math import cos
 
 # ---------------------------   ROBOT CONSTRUCTION   --------------------------#
 #creates the robot skeleton
-r = Robot()
+
 
 #adds motors to the robot skeleton
-r.add_object(AX12(174), "motor")
+#r.add_object(AX12(174), "motor")
 
+m = AX12(173)
 precision = 10
 
 # -------------------------   SEQUENCE DEFINITION ----------------------------#
@@ -21,7 +22,7 @@ def follow_scroll():
         
         t = 0
 	while t < 100:
-        	r.motor.turn(cos(t))
+        	m.turn(cos(t))
                 t += 0.1
 		sleep(0.001)
 
